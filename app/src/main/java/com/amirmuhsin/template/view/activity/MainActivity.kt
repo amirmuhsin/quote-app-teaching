@@ -30,7 +30,7 @@ class MainActivity : FragmentActivity() {
 
         viewPager = findViewById(R.id.viewPager2)
 
-        val pagerAdapter = QuotePagerAdapter(quoteList)
+        val pagerAdapter = QuotePagerAdapter(quoteList.shuffled())
         viewPager.adapter = pagerAdapter
         viewPager.setCurrentItem(QuotePagerAdapter.FAKE_INFINITY_SIZE / 2, false)
     }
