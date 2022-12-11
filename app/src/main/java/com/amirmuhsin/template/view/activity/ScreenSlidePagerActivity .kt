@@ -16,7 +16,7 @@ class ScreenSlidePagerActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout. activity_main)
+        setContentView(R.layout.activity_main)
 
         viewPager = findViewById(R.id.pager)
 
@@ -33,6 +33,7 @@ class ScreenSlidePagerActivity : FragmentActivity() {
     }
 
     private inner class ScreenSlidePageAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+
         override fun getItemCount(): Int = NUM_PAGES
 
         override fun createFragment(position: Int): Fragment = ScreenSlidePageFragment()
