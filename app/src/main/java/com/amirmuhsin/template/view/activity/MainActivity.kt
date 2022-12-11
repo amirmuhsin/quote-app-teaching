@@ -1,7 +1,6 @@
 package com.amirmuhsin.template.view.activity
 
 import androidx.viewpager2.widget.ViewPager2
-import com.amirmuhsin.template.R
 import com.amirmuhsin.template.data.model.Quote
 import com.amirmuhsin.template.databinding.ActivityMainBinding
 import com.amirmuhsin.template.view.adapter.QuotePagerAdapter
@@ -28,20 +27,12 @@ class MainActivity : BaseActivityTemporary<ActivityMainBinding>(
     private lateinit var pagerAdapter: QuotePagerAdapter
 
     override fun assignObjects() {
-        viewPager = findViewById(R.id.viewPager2)
+        viewPager = binding.viewPager2
         pagerAdapter = QuotePagerAdapter(quoteList.shuffled())
     }
 
     override fun prepareUI() {
         viewPager.adapter = pagerAdapter
         viewPager.setCurrentItem(QuotePagerAdapter.FAKE_INFINITY_SIZE / 2, false)
-    }
-
-    override fun onBackPressed() {
-        if (viewPager.currentItem == 0) {
-            super.onBackPressed()
-        } else {
-            viewPager.currentItem = viewPager.currentItem - 1
-        }
     }
 }
