@@ -30,7 +30,7 @@ class MainActivity : FragmentActivity() {
 
         viewPager = findViewById(R.id.viewPager2)
 
-        val pagerAdapter = QuotePagerAdapter(this)
+        val pagerAdapter = QuotePagerAdapter(quoteList)
         viewPager.adapter = pagerAdapter
     }
 
