@@ -14,12 +14,18 @@ class QuotePagerAdapter(val quoteList: List<Quote>) : RecyclerView.Adapter<Quote
     }
 
     // data modelimiz nechta bo'lsa, o'shancha kiradi. In other word: `getItemCount()` nechini bersa, o'shancha shu method ishga tushadi
-    override fun onBindViewHolder(cup: QuotePageViewHolder, position: Int) {
-        val quote = quoteList[position]
+    override fun onBindViewHolder(cup: QuotePageViewHolder, fakePosition: Int) {
+        val realPosition = getRealPosition(fakePosition)
+        val quote = quoteList[realPosition]
         cup.layout.populateData(quote)
     }
 
-    override fun getItemCount(): Int = quoteList.size
+    override fun getItemCount(): Int = 22
+
+    private fun getRealPosition(fakePosition: Int): Int {
+        val realListSize = quoteList.size
+        return fakePosition % realListSize
+    }
 
     inner class QuotePageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
