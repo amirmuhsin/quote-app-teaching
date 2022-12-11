@@ -5,5 +5,16 @@
     ++ ViewPager2 ni adapterini bir qara
     ++ Fragment bilan qilish o'zi shartmidi
     ++ Oddiy layout bilan RecyclerView'daka qilsek bo'lvurarmidi
--- limitless page qil
+++ limitless page qil
 -- knopkalarni qil
+    -- telegram
+    -- whatsapp
+    -- general share
+
+
+-- quote'lar SQLite/Room'dan kelsin
+    -- existing database ga quote'lar to'ldirilib, o'shani splash screen'da app storage'ga copy qilish kerak
+
+-- back button bosilgan, popup chiqsin, va "chiqishni xohlaysizmi" desin va "Ha, Yo'q" knopkalar bo'lsin
+
+-- AdMob integration qilinsin
