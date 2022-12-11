@@ -1,0 +1,8 @@
+
+
+-- 10 ta quote va 10tasi ko'rinsin va 10ta page bo'lsin
+    -- ViewPager2 ni adapterini bir qara
+    -- Fragment bilan qilish o'zi shartmidi
+    -- Oddiy layout bilan RecyclerView'daka qilsek bo'lvurarmidi
+-- limitless page qil
+-- knopkalarni qil

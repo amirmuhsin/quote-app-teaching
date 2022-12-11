@@ -14,7 +14,7 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewPager = findViewById(R.id.pager)
+        viewPager = findViewById(R.id.viewPager2)
 
         val pagerAdapter = QuotePagerAdapter(this)
         viewPager.adapter = pagerAdapter
