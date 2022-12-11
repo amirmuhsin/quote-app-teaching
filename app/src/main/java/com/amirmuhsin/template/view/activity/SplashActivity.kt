@@ -18,7 +18,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(Acti
         splashScreen.setKeepOnScreenCondition { true }
 
         val handler = Handler(Looper.getMainLooper()) {
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, ScreenSlidePagerActivity::class.java)
             startActivity(intent)
             finish()
             false
