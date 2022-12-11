@@ -21,7 +21,12 @@ class SplashActivity : AppCompatActivity() {
             finish()
             false
         }
-        handler.sendEmptyMessageDelayed(0, 2000)
+        handler.sendEmptyMessageDelayed(0, NEXT_ACTIVITY_DELAY_IN_SECONDS)
 
+    }
+
+    companion object {
+
+        const val NEXT_ACTIVITY_DELAY_IN_SECONDS = 2_000L
     }
 }
