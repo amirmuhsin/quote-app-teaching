@@ -1,13 +1,15 @@
 package com.amirmuhsin.template.view.activity
 
-import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.amirmuhsin.template.R
 import com.amirmuhsin.template.data.model.Quote
+import com.amirmuhsin.template.databinding.ActivityMainBinding
 import com.amirmuhsin.template.view.adapter.QuotePagerAdapter
+import com.amirmuhsin.template.view.base.BaseActivityTemporary
 
-class MainActivity : FragmentActivity() {
+class MainActivity : BaseActivityTemporary<ActivityMainBinding>(
+    ActivityMainBinding::inflate
+) {
 
     private val quoteList = arrayListOf(
         Quote(1, "Birinchi Quote", "Mirmuhsin"),
@@ -23,14 +25,14 @@ class MainActivity : FragmentActivity() {
     )
 
     private lateinit var viewPager: ViewPager2
+    private lateinit var pagerAdapter: QuotePagerAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+    override fun assignObjects() {
         viewPager = findViewById(R.id.viewPager2)
+        pagerAdapter = QuotePagerAdapter(quoteList.shuffled())
+    }
 
-        val pagerAdapter = QuotePagerAdapter(quoteList.shuffled())
+    override fun prepareUI() {
         viewPager.adapter = pagerAdapter
         viewPager.setCurrentItem(QuotePagerAdapter.FAKE_INFINITY_SIZE / 2, false)
     }
