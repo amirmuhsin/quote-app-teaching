@@ -20,7 +20,7 @@ class QuotePagerAdapter(val quoteList: List<Quote>) : RecyclerView.Adapter<Quote
         cup.layout.populateData(quote)
     }
 
-    override fun getItemCount(): Int = 22
+    override fun getItemCount(): Int = FAKE_INFINITY_SIZE
 
     private fun getRealPosition(fakePosition: Int): Int {
         val realListSize = quoteList.size
@@ -31,6 +31,11 @@ class QuotePagerAdapter(val quoteList: List<Quote>) : RecyclerView.Adapter<Quote
 
         val layout = itemView as QuotePageLayout
 
+    }
+
+    companion object {
+
+        const val FAKE_INFINITY_SIZE = 10_000
     }
 
 }

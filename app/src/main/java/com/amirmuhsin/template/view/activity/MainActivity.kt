@@ -32,6 +32,7 @@ class MainActivity : FragmentActivity() {
 
         val pagerAdapter = QuotePagerAdapter(quoteList)
         viewPager.adapter = pagerAdapter
+        viewPager.setCurrentItem(QuotePagerAdapter.FAKE_INFINITY_SIZE / 2, false)
     }
 
     override fun onBackPressed() {
