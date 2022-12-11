@@ -10,7 +10,7 @@ import com.amirmuhsin.template.R
 
 private const val NUM_PAGES = 10
 
-class ScreenSlidePagerActivity : FragmentActivity() {
+class MainActivity : FragmentActivity() {
 
     private lateinit var viewPager: ViewPager2
 
