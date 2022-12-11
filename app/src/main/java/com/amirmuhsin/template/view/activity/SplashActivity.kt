@@ -1,18 +1,16 @@
 package com.amirmuhsin.template.view.activity
 
 import android.content.Intent
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.amirmuhsin.template.databinding.ActivitySplashBinding
-import com.amirmuhsin.template.view.base.BaseActivity
-import com.amirmuhsin.template.viewmodel.SplashViewModel
 
-class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(ActivitySplashBinding::inflate) {
+class SplashActivity : AppCompatActivity() {
 
-    override fun viewModelClass() = SplashViewModel::class.java
-
-    override fun setupSplashScreen() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
 
         splashScreen.setKeepOnScreenCondition { true }
@@ -24,6 +22,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(Acti
             false
         }
         handler.sendEmptyMessageDelayed(0, 2000)
-    }
 
+    }
 }
