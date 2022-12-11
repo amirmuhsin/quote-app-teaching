@@ -1,14 +1,10 @@
 package com.amirmuhsin.template.view.activity
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.amirmuhsin.template.R
-
-private const val NUM_PAGES = 10
+import com.amirmuhsin.template.view.adapter.QuotePagerAdapter
 
 class MainActivity : FragmentActivity() {
 
@@ -20,7 +16,7 @@ class MainActivity : FragmentActivity() {
 
         viewPager = findViewById(R.id.pager)
 
-        val pagerAdapter = ScreenSlidePageAdapter(this)
+        val pagerAdapter = QuotePagerAdapter(this)
         viewPager.adapter = pagerAdapter
     }
 
@@ -30,12 +26,5 @@ class MainActivity : FragmentActivity() {
         } else {
             viewPager.currentItem = viewPager.currentItem - 1
         }
-    }
-
-    private inner class ScreenSlidePageAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-
-        override fun getItemCount(): Int = NUM_PAGES
-
-        override fun createFragment(position: Int): Fragment = ScreenSlidePageFragment()
     }
 }
