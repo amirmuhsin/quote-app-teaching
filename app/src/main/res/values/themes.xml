@@ -21,8 +21,20 @@
 
     <!--  SplashScreen Theme (pre Android 12)  -->
     <style name="SplashScreenTheme" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/teal_200</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenBackground">@color/purple_700</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
+
+    <style name="QuoteTextViewStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/quote_text_size</item>
+        <item name="android:textColor">@color/quote_text_color</item>
+    </style>
+
+    <style name="AuthorTextViewStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/author_text_size</item>
+        <item name="android:textColor">@color/author_text_color</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>

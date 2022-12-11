@@ -14,12 +14,14 @@
 
         <TextView
             android:id="@+id/tvQuote"
+            style="@style/QuoteTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Alq aqlning tegi naql" />
 
         <TextView
             android:id="@+id/tvAuthor"
+            style="@style/AuthorTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Donlar donosi" />
